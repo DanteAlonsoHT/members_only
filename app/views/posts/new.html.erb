@@ -1,0 +1,20 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div>
+      <h2><%= pluralize(post.errors.count, "error") %> Uups! It's not possible create this post: </h2>
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= post.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+
+    <%= form.submit %>
+<% end %>
