@@ -1,17 +1,5 @@
 
 <h1 class="text-center">Welcome MembersOnly :)</h1>
-<div class="fs-3 text-center">
-<% if user_signed_in? %>
-
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
-    <%= link_to "New Post", new_post_path %>
-<% else %>
-
-    <%= link_to "Log in", new_user_session_path %><br>
-    <%= link_to "Sign up", new_user_registration_path %><br>
-
-<% end %>
-</div>
 
 <!-- <%= user_session  %> -->
 
