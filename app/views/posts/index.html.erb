@@ -1,0 +1,24 @@
+
+<h1 class="text-center">Welcome MembersOnly :)</h1>
+
+<!-- <%= user_session  %> -->
+
+
+<% @posts.each do |post| %>
+<div class="card p-3 m-2 text-center">
+  <div class="card-header text-muted">
+    <h3 class="m-1"> <%= post.title %> </h3>
+  </div>
+    <div class="card-body">
+        <% if user_signed_in? %>
+        <strong class="card-title"> Author: <%= post.author %> </strong>
+        <% else %>
+        <strong class="card-title">***** Uups! Author Not Available **** </strong>
+        <% end %>
+        
+        <p class="card-text"> <%= post.body %> </p>
+        <strong class="text-muted"> <%= post.location %> </strong>
+    </div>
+  
+</div>
+<% end %>
