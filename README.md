@@ -5,7 +5,11 @@
 In this project, we build an exclusive clubhouse where members can write posts about non-members.  Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it. You can get the full project description [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication). 
 
 ## Screenshot
-![screenshot1](image/create-new-article-members-only.png)
+![screenshot1](image/sign-up-members-only.PNG)
+![screenshot2](image/login-member-only.PNG)
+![screenshot3](image/signed-in-members-only.PNG)
+![screenshot4](image/signed-out-members-only.PNG)
+![screenshot5](image/create-new-article-members-only.PNG)
 
 ## Built with
 
