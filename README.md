@@ -37,9 +37,18 @@ Follow the steps below to get a local copy running:
 
 ### Run App
 - Type `bundle install` in the root directory of the project.
-- Type `rails db:migrate` in the root directory of the project.
+- Type `rails db:create` in the root directory of the project to create the database.
+- Type `rails db:migrate` in the root directory of the project to migrate the database.
 - Type `rails server` in the root directory of the project.
 - Open a browser, copy and paste `http://localhost:3000`
+
+### Warning
+
+If you have an error named: 
+
+**"Webpacker::Manifest::MissingEntryError in ..."**
+
+Type in the terminal `rails webpacker:install` in the root directory of the project to fix it.
 
 ## Authors
 
