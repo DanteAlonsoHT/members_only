@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2021_06_18_002639) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "author", default: "Anonymous"
-    t.text "body", null: false, length: {minimum:25, maximum:255}
-    t.string "location", default: "Remote/Anywhere"
+    t.string "title"
+    t.string "author"
+    t.text "body"
+    t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
