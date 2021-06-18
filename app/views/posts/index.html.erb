@@ -14,3 +14,21 @@
 
 <% end %>
 </div>
+
+<!-- <%= user_session  %> -->
+
+
+<% @posts.each do |post| %>
+<div style="padding: 2rem; margin: 2rem; text-align: center; border: #000 1px solid;">
+    <h2> <%= post.title %> </h2>
+    <% if user_signed_in? %>
+    <strong> Author: <%= post.author %> </strong>
+    <% else %>
+    <strong>***** Uups! Author Not Available **** </strong>
+    <% end %>
+    
+    <p style="display: block; word-wrap: break-word;"> <%= post.body %> </p>
+    <strong> <%= post.location %> </strong>
+    
+</div>
+<% end %>
