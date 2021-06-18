@@ -1,8 +1,6 @@
 
-<h1 style="margin: 2rem auto; text-align: center;">Welcome my friend :)</h1>
-<div style="display: flex; justify-content: center;
-            align-items: center; flex-direction: column;
-            font-size: 22px; margin: 0;">
+<h1 class="text-center">Welcome MembersOnly :)</h1>
+<div class="fs-3 text-center">
 <% if user_signed_in? %>
 
     <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
@@ -19,16 +17,20 @@
 
 
 <% @posts.each do |post| %>
-<div style="padding: 2rem; margin: 2rem; text-align: center; border: #000 1px solid;">
-    <h2> <%= post.title %> </h2>
-    <% if user_signed_in? %>
-    <strong> Author: <%= post.author %> </strong>
-    <% else %>
-    <strong>***** Uups! Author Not Available **** </strong>
-    <% end %>
-    
-    <p style="display: block; word-wrap: break-word;"> <%= post.body %> </p>
-    <strong> <%= post.location %> </strong>
-    
+<div class="card p-3 m-2 text-center">
+  <div class="card-header text-muted">
+    <h3 class="m-1"> <%= post.title %> </h3>
+  </div>
+    <div class="card-body">
+        <% if user_signed_in? %>
+        <strong class="card-title"> Author: <%= post.author %> </strong>
+        <% else %>
+        <strong class="card-title">***** Uups! Author Not Available **** </strong>
+        <% end %>
+        
+        <p class="card-text"> <%= post.body %> </p>
+        <strong class="text-muted"> <%= post.location %> </strong>
+    </div>
+  
 </div>
 <% end %>

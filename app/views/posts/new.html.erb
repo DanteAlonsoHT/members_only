@@ -1,3 +1,5 @@
+<h1> Create a new post </h1>
+
 <%= form_with(model: @post) do |form| %>
   <% if @post.errors.any? %>
     <div>
@@ -22,7 +24,7 @@
     <%= form.label :location %><br>
     <%= form.text_field :location %><br>
 
-    <%= form.label :user_id %>
+    <% form.label :user_id %>
     <%= form.text_field :user_id, value: current_user.id %>
 
     <%= form.submit %>
